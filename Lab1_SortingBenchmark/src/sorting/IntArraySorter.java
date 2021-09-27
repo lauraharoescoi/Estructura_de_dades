@@ -48,11 +48,26 @@ public class IntArraySorter {
     }
 
     public void bubbleSort() {
-        throw new UnsupportedOperationException("TODO: bubbleSort");
+        for (int sorted = array.length; sorted > 0; sorted--) {
+            for (int pos = 0; pos < sorted - 1; pos++) {
+                if (array[pos] > array[pos + 1]) {
+                    swap(pos + 1, pos);
+                }
+            }
+        }
     }
 
     public void selectionSort() {
-        throw new UnsupportedOperationException("TODO: selectionSort");
+        int compare = 0;
+        for (int pos = 0; pos < array.length; pos++) {
+            compare = pos;
+            for (int i = pos; i < array.length; i++) {
+                if (array[i] < array[compare]) {
+                    compare = i;
+                }
+            }
+            swap(pos, compare);
+        }
     }
 
     public void quickSort() {
