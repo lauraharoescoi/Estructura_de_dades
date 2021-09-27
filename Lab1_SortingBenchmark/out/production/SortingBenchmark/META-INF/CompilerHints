@@ -1,0 +1,10 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,benchmark/MyBenchmark$BenchMarkState.fillArray
+inline,benchmark/MyBenchmark.testBubbleSort
+inline,benchmark/MyBenchmark.testInsertionSort
+inline,benchmark/MyBenchmark.testQuickSort
+inline,benchmark/MyBenchmark.testSelectionSort
