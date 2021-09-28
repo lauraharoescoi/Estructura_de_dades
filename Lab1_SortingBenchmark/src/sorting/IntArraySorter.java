@@ -71,6 +71,26 @@ public class IntArraySorter {
     }
 
     public void quickSort() {
-        throw new UnsupportedOperationException("TODO: quickSort");
+        quickSort(0, array.length);
     }
+
+    public void quickSort(int left, int right) {
+        int leftLimit = left;
+        int rightLimit = right - 1;
+        int pivot = array[right - 1];
+
+        while (leftLimit != rightLimit) {
+            while (array[leftLimit] < pivot) {
+                leftLimit++;
+            }
+            while (array[rightLimit - 1] > pivot) {
+                rightLimit--;
+            }
+        }
+        swap(leftLimit, right -1);
+
+        quickSort(left, leftLimit);
+        quickSort(rightLimit + 1, right);
+    }
+
 }
