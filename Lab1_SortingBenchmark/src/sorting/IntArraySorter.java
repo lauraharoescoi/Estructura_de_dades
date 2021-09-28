@@ -76,21 +76,27 @@ public class IntArraySorter {
 
     public void quickSort(int left, int right) {
         int leftLimit = left;
-        int rightLimit = right - 1;
+        int rightLimit = right - 2;
         int pivot = array[right - 1];
 
-        while (leftLimit != rightLimit) {
+        while (leftLimit < rightLimit ) {
             while (array[leftLimit] < pivot) {
                 leftLimit++;
             }
-            while (array[rightLimit - 1] > pivot) {
+            while (array[rightLimit] >= pivot && rightLimit > leftLimit) {
                 rightLimit--;
             }
         }
-        swap(leftLimit, right -1);
+        if (rightLimit != right - 1) {
+            swap(leftLimit, right - 1);
 
-        quickSort(left, leftLimit);
-        quickSort(rightLimit + 1, right);
+            if (leftLimit - left > 1) {
+                quickSort(left, leftLimit);
+            }
+            if (right - rightLimit > 1) {
+                quickSort(rightLimit + 1, right - 1);
+            }
+        }
     }
 
 }
