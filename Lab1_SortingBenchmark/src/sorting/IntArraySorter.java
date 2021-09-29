@@ -48,36 +48,38 @@ public class IntArraySorter {
     }
 
     public void bubbleSort() {
-        for (int sorted = array.length; sorted > 0; sorted--) {
-            for (int pos = 0; pos < sorted - 1; pos++) {
-                if (array[pos] > array[pos + 1]) {
-                    swap(pos + 1, pos);
+        for (int i = array.length; i > 0; i--) {
+            for (int j = 0; j < i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    swap(j + 1, j);
                 }
             }
         }
     }
 
     public void selectionSort() {
-        int compare = 0;
-        for (int pos = 0; pos < array.length; pos++) {
-            compare = pos;
-            for (int i = pos; i < array.length; i++) {
-                if (array[i] < array[compare]) {
-                    compare = i;
+        int aux = 0;
+        for (int i = 0; i < array.length; i++) {
+            aux = i;
+            for (int j = i; j < array.length; j++) {
+                if (array[j] < array[aux]) {
+                    aux = j;
                 }
             }
-            swap(pos, compare);
+            swap(i, aux);
         }
     }
 
     public void quickSort() {
-        quickSort(0, array.length);
+        if (array.length > 1) {
+            quickSort(0, array.length - 1);
+        }
     }
 
     public void quickSort(int left, int right) {
         int leftLimit = left;
-        int rightLimit = right - 2;
-        int pivot = array[right - 1];
+        int rightLimit = right;
+        int pivot = array[right];
 
         while (leftLimit < rightLimit ) {
             while (array[leftLimit] < pivot) {
@@ -86,17 +88,17 @@ public class IntArraySorter {
             while (array[rightLimit] >= pivot && rightLimit > leftLimit) {
                 rightLimit--;
             }
+            if (leftLimit < rightLimit) {
+                swap(leftLimit, rightLimit);
+            }
         }
-        if (rightLimit != right - 1) {
-            swap(leftLimit, right - 1);
+        swap(right, rightLimit);
 
-            if (leftLimit - left > 1) {
-                quickSort(left, leftLimit);
-            }
-            if (right - rightLimit > 1) {
-                quickSort(rightLimit + 1, right - 1);
-            }
+        if (left < rightLimit -  1) {
+            quickSort(left, rightLimit - 1);
+        }
+        if (rightLimit + 1 < right) {
+            quickSort(rightLimit + 1, right);
         }
     }
-
 }
