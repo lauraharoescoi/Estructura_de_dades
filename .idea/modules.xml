@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Estructura_de_dades.iml" filepath="$PROJECT_DIR$/.idea/Estructura_de_dades.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab1_SortingBenchmark/Lab1_SortingBenchmark.iml" filepath="$PROJECT_DIR$/Lab1_SortingBenchmark/Lab1_SortingBenchmark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab2__POO/Lab2__POO.iml" filepath="$PROJECT_DIR$/Lab2__POO/Lab2__POO.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab1_SortingBenchmark/out/out.iml" filepath="$PROJECT_DIR$/Lab1_SortingBenchmark/out/out.iml" />
     </modules>
   </component>
