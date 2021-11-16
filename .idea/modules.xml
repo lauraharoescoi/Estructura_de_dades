@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/LABORATORI_EEDD.iml" filepath="$PROJECT_DIR$/.idea/LABORATORI_EEDD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab1_SortingBenchmark/Lab1_SortingBenchmark.iml" filepath="$PROJECT_DIR$/Lab1_SortingBenchmark/Lab1_SortingBenchmark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab2__LauraHaroEscoi_GuillemMoraBea/Lab2__LauraHaroEscoi_GuillemMoraBea.iml" filepath="$PROJECT_DIR$/Lab2__LauraHaroEscoi_GuillemMoraBea/Lab2__LauraHaroEscoi_GuillemMoraBea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab1_SortingBenchmark/out/out.iml" filepath="$PROJECT_DIR$/Lab1_SortingBenchmark/out/out.iml" />
+    </modules>
+  </component>
+</project>
