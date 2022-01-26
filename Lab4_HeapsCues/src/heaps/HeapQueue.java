@@ -25,11 +25,11 @@ public class HeapQueue<V, P extends Comparable<? super P>>
         public int compareTo(Triplet<V, P> o) {
             if (o == null) throw new NullPointerException();
             if (o.priority == this.priority) return Long.compare(this.timeStamp, o.timeStamp);
-            if (o.priority == null || this.priority == null) return comparetoNull();
+            if (o.priority == null || this.priority == null) return compareToNull();
             else return this.priority.compareTo(o.priority);
         }
 
-        private int comparetoNull() {
+        private int compareToNull() {
             if (this.priority == null) return -1;
             else return 1;
         }
